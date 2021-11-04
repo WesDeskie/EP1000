@@ -2,6 +2,7 @@ body{
   background-color: #EEE;
   width: 100%;
   margin: 0;
+  font-family: inherit;
 }
 a{
   text-decoration: underline;
@@ -18,32 +19,42 @@ h1, h2, h3{
 
 #container{
   background-color: pink;
-  margin-left: auto;
+  margin: auto;
+
+
+
 }
 #content{
   text-align: center;
   background-color: white;
   color: black;
-  padding:20px;
+  margin: 0 10% 0 10%;
+  padding: 10px 10px;
 }
 #nav{
   background-color: red;
   width: 100%;
   text-align: center;
+  position: fixed;
 
 
 }
 #main{
   margin: auto;
-  font-size: 20px;
-  width:1000px;
+  font-size: 30px;
   text-align: center;
+  padding: 10px;
 
+
+}
+#main h1{
+  padding-top: 10px 10px;
+}
 }
 #footer{
   background-color: #999;
   color: white;
-  text-align: right;
+  text-align: center;
   padding-right:10px;
 }
 #nav .selected {
