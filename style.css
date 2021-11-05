@@ -7,9 +7,7 @@ body{
 a{
   text-decoration: underline;
 }
-h1, h2, h3{
-  margin: 0;
-}
+
 
 #header{
   background-color: blue;
@@ -20,6 +18,7 @@ h1, h2, h3{
 #container{
   background-color: pink;
   margin: auto;
+  padding-top: 100px;
 
 
 
@@ -30,6 +29,8 @@ h1, h2, h3{
   color: black;
   margin: 0 10% 0 10%;
   padding: 10px 10px;
+
+
 }
 #nav{
   background-color: red;
