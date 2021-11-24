@@ -7,13 +7,25 @@
   </head>
   <body>
     <div id="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class = "selected" href = "about.html" >About me</a></li>
-        <li><a href = "Safety.html" >Fablab Safety</a></li>
-        <li><a href = "Learning.html" >Learning</a></li>
-        <li><a href = "projects/project.html" >Final project</a></li>
 
+      <ul>
+        <li><a class="selected" href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="Safety.html">Fablab Safety</a></li>
+        <!--<li><div class="dropdown"><a href = "Learning.html" >Learning</a></div></li>-->
+        <li>
+          <div class="dropdown">
+            <!-- <button class="dropbtn">Learning</button> -->
+            <p>Learning</p>
+            <div class="dropdown-content">
+              <a href="projects/web development.html">HTML & CSS</a>
+              <a href="projects/version control.html">Version control</a>
+              <a href="#">CAD</a>
+              <a href="#">3D Printing</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="projects/project.html">Final project</a></li>
       </ul>
     </div>
     <div id="container">
