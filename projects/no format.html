@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="this is awesome">
+    <title>HTML & CSS</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+  </head>
+
+  <body>
+    <!-- <div id="nav">
+
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="../Safety.html">Fablab Safety</a></li>
+        <li><div class="dropdown"><a href = "Learning.html" >Learning</a></div></li>
+        <li>
+          <div class="dropdown"> -->
+            <!-- <button class="dropbtn">Learning</button>
+            <p><b>Learning</b></p>
+            <div class="dropdown-content">
+              <a href="web development.html">HTML</a>
+              <a href="css.html">CSS</a>
+              <a href="#">CAD</a>
+              <a href="#">3D Printing</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="projects/project.html">Final project</a></li>
+      </ul>
+    </div> -->
+    <div id="container">
+
+      <div id="content">
+        <div id="main">
+          <h1><b>Web Development</b></h1>
+          <p>HTML and web development</p>
+          <p>One of the most important things about prototyping is documentation. Which is why we kickstarted the module by learning the fundamentals of HTML and CSS to create the website you see in front of you right now. This was my very first website as you can probably tell by the rudimentary appearance, but then again, I learnt that when documentation is concerned, content is more critical than appearance.</p>
+          <hr>
+          <p>HTML in itself has no formatting. We simply use what are called tags, to create content like text, images and video etc. Therefore we have to use CSS to customise the style of our website.</p>
+          <hr>
+          <p>Lets look at this page without any formatting. If you want to view this page without formatting, click <a href="no format.html">here</a></p>
+          <br>
+          <img width="700" src="../images/html no format.png" alt="example of webpage with no formatting">
+          <p>Looks pretty basic right? But notice that the content is exactly the same. This is what we use HTML for, and this page will show you what I learnt about html in this module, and how I created the content you see above (without formatting).</p>
+          <hr>
+
+          <ul>
+            <p>So lets look at how I created the content for this page. If you want to follow along, you'll need to do a few things</p>
+            <li>download a text editor such as ATOM or Visual Studio (I used ATOM)</li>
+            <li>create a folder to save all your html files to</li>
+            <li>create a text file called "index.html" (This will be your homepage)</li>
+            <li>Open up your text editor, and type in "html" and press enter.</li>
+            <br>
+            <img width="650" src="../images/html gif.gif" alt="creating html tag gif">
+
+          </ul>
+          <hr>
+          <p>We're now ready to start writing our content!</p>
+          <hr>
+          <h2>Using paragraph tags</h2>
+          <p>Almost all the text in this website is created using paragraph tags. To create a paragraph, type in "< p >" to indicate the start of your paragraph, and "< / p >" to denote the end of your paragraph like so.</p>
+          <img width="700" src="../images/paragraph example.png" alt="example of paragraph tag">
+          <p>I'm using <a href="https://htmlcodeeditor.com/" target="_blank">html code editor</a> to preview my output.</p>
+          <hr>
+          <h2>Using header tags</h2>
+          <p>If you want to have a nice big header like the one above, you can use header tags, they range from h1 to h6, with h1 being the biggest and h6 being the smallest</p>
+          <h1>This is h1</h1>
+          <h2>This is h2</h2>
+          <h3>This is h3</h3>
+          <p>We can now add a header to our website like so!</p>
+            <img width="700" src="../images/Header example.png" alt="example of header tag">
+            <p>So thats how I created most of my content</p>
+            <hr>
+            <h2>Navigation bar</h2>
+            <p>The navigation bar you see at the top of this site was created with a list. There are two types of lists, Ordered lists, and unordered lists. To make an ordered list, use the tag "ol" and for an unordered list, use the tag "ul". To add items to the list, use the tag "li".</p>
+            <ol>
+              <p>This is an ordered list</p>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ol>
+            <ul>
+              <p>This is an unordered list</p>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ul>
+            <p>Lets add a navigation bar to our preview in <a href="https://htmlcodeeditor.com/" target="_blank">html code editor</a></p>
+              <img width="700" src="../images/list example.png" alt="example of list tag">
+              <hr>
+              <h2>Adding links</h2>
+              <p>We have a navigation bar, but notice that we can't click on them and they dont lead anywhere. Therefore we have to use the "a" tag to add a link to our text. Create a .html text file inside your folder and we will use the "a" tag to link to that page. Alternatively you can add a link to another webpage online.</p>
+              <img width="700" src="../images/link example.png" alt="example of link tag">
+              <p>This is how I linked my other pages to this one.</p>
+              <img width="700" src="../images/open in new tab example.png" alt="example of link in new tab">
+              <p>This is how I embedded the htmlcodeeditor website into my page. You can type in target = "_blank" to open the link in a new tab.</p>
+
+              <hr>
+              <h2>Images and Videos</h2>
+              <p>I added some images and videos by using the "< img >" tag. This allows me to link to images and videos saved in my website folder like so.</p>
+              <img width="700" src="../images/img example.png" alt="example of img tag">
+              <p>The src is where you put your location of the file, and the alt is the alternative text that will appear should your image not be able to load. You can also adjust the width of your image by typing width = "width that you want in pixels".</p>
+              <hr>
+              <h2>Additional tags</h2>
+              <p>So thats basically how I wrote the content for this site, using headers, paragraphs and lists. But there are also a couple of other useful tags that I used to make the site a bit easier to read. They are:</p>
+              <ul>
+                <li>Horizontal rules "< hr > " (These create the lines used to seperate the sections)</li>
+                <li>Divisions "< div >" (These are used to divide my webpage into different parts so I can format them with CSS later)</li>
+              </ul>
+              <hr>
+              <p>So thats basically how I created the content for my site. As mentioned before, this is just for content and lacks any sort of formatting. To see how I formatted my website using CSS, you can click <a href="#" >here</a>. </p>
+
+
+
+        </div>
+      </div>
+      <div id="footer">
+        Copyright &copy; 2021 Wesley Mok
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+
+</html>
