@@ -32,14 +32,7 @@ a{
 
 
 }
-#nav{
-  background-color: red;
-  width: 100%;
-  text-align: center;
-  position: fixed;
 
-
-}
 #main{
   margin: auto;
   font-size: 30px;
@@ -60,6 +53,12 @@ a{
 }
 #nav .selected {
   font-weight: bold;
+}
+#nav{
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  position: fixed;
 }
 #nav ul{
   list-style: none;
@@ -130,5 +129,5 @@ a{
 
 .dropdown:hover .dropbtn {background-color: violet;}
 video{
-  width: 100%;
+  width: 100%
 }

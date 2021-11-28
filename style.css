@@ -32,14 +32,7 @@ a{
 
 
 }
-#nav{
-  background-color: red;
-  width: 100%;
-  text-align: center;
-  position: fixed;
 
-
-}
 #main{
   margin: auto;
   font-size: 30px;
@@ -50,6 +43,14 @@ a{
 }
 #main h1{
   padding-top: 10px 10px;
+}
+#nav{
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+
+
 }
 }
 #footer{
@@ -94,6 +95,10 @@ a{
   padding: 10px 0;
   margin: 0;
 /* border: 100%; */
+}
+table{
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .dropbtn {

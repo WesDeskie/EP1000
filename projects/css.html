@@ -19,7 +19,6 @@
         <!--<li><div class="dropdown"><a href = "Learning.html" >Learning</a></div></li>-->
         <li>
           <div class="dropdown">
-            <!-- <button class="dropbtn">Learning</button> -->
             <p><b>Learning</b></p>
             <div class="dropdown-content">
               <a href="web development.html">HTML</a>
@@ -38,18 +37,66 @@
         <div id="main">
           <h2>Formatting with CSS</h2>
           <p>After creating your website using HTML, you'll probably want to make it look more aesthetic with some formatting. This is where CSS will come in handy. If you want to learn the basics of HTML, you can click <a href="web development.html">here.</a></p>
+
           <hr>
-          <p>In this webpage, I will be going through the basics of CSS by showing you how I formatted my webpage. I will also compare the differences between using Markdown and CSS to format my website.</p>
+          <p>In this webpage, I will be going through the basics of CSS by showing you how I formatted my webpage. </p>
           <hr>
           <h2>What is CSS?</h2>
           <p>CSS stands for "Cascading Style Sheet" and is a style sheet language that we will use to format our webpage and get from something like <a href="no format.html" target="_blank">this,</a> to the webpage you see in front of you.</p>
           <hr>
+          <h2>Learn CSS in 12 minutes</h2>
+          In this module, we were encouraged to watch "Learn CSS in 12 Minutes" by Jake Wright. A Youtube video which taught us the basics of CSS in a mere 12 minutes. You can watch his Youtube video here.
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0afZj1G0BIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>I formatted most of my webpage following Jake Wright's video, and added a few extra touches such as the dropdown menu you see at the top of the screen.</p>
+          <hr>
+
           <p>So lets look at how I formatted this page. If you want to follow along, you'll need to do a few things.</p>
           <ul>
             <li>Create a new file called "style.css" in your project folder.</li>
             <li>Open your text editor, and warm up your fingers.</li>
           </ul>
-
+          <hr>
+          <h2>Using Divisions</h2>
+          <p>The first thing I did is seperate my content into different divisions using the "&ltdiv&gt;" tag and we give them an id, so we can format them later. In my case, I followed Jake Wright's tutorial and created the following divisions.</p>
+          <ul>
+            <li>A div called "nav" for my navigation bar</li>
+            <li>A div called "container"  </li>
+            <li>A div called "content" within the "container"</li>
+            <li>A div called "main" within "content"</li>
+            <li>A div called "footer"</li>
+          </ul>
+          <img width=50% src="../images/divs pic.png" alt="picture of my format">
+          <p>After that, I placed my content into the "main" division.</p>
+          <p>Then, I opened up my "style.css" file, and set the width of my container to auto, so it will fill up the width of the browser window. I set the colour to pink, so it will be easier to differentiate the container from the other divs. I repeated the formatting steps for my other divs.</p>
+            <img width=50% src="../images/formatting pic.png" alt="picture of my css">
+            <hr>
+            <h2>Navigation bar</h2>
+            <p>I formatted my horizontal navigation bar like so. I created an unordered list and then used css to make it horizontal and fixed in place.</p>
+            <img width=50% src="../images/nav format.png" alt="picture of my nav format">
+            <p>Using CSS, I can edit any element I want for example, I formatted the list item by using the id "#nav li" and the links using "#nav a". There's a lot to take in but the main points are that I changed the display of the list items to "inline block" to make them horizontal, and I set changed the position of my "nav" division to "fixed", so it stays at the top of the screen.</p>
+            <hr>
+            <h2>Dropdown Menu</h2>
+            <p>By now you should have noticed the dropdown menu appearing when you hover your cursor over the "Learning" tab. I achieved this like so.</p>
+            <img width=50% src="../images/dropdown pic.png" alt="dropdown menu code">
+            <ol>
+              <li>Create a div called "dropdown" within "nav"</li>
+              <li>Use a paragraph tag to write your text</li>
+              <li>Create div called "dropdown-content" within "dropdown"</li>
+              <li>Place all your links in the "dropdown-content" div</li>
+              <p>(notice I used "class" instead of "id")</p>
+            </ol>
+            <p>Once finished, open up your "style.css" file and modify it like so:</p>
+            <img width=50% src="../images/dropdown css.png" alt="dropdown menu css code">
+            <p>Above, you'll notice that I: </p>
+            <ul>
+              <li>Set up the colours for the menu and when you hover over the items</li>
+              <li>Set list-style to "none" to remove bullet points</li>
+              <li>Set width and font size</li>
+            </ul>
+            <p>Admittedly, I was not clever enough to come up with this solution myself, so if you want to see a more comprehensive explanation, you can check out <a href="https://www.w3schools.com/howto/howto_css_dropdown.asp">w3school's tutorial</a> which I used as the basis to create my dropdown menu.</p>
+            <hr>
+            <h2>Conclusion</h2>
+            <p>CSS is a very useful tool in web development as it allows us to come up with cool designs for our websites and is the code responsible for all of the aesthetic webpages you see today. My website only scratched the surface of what CSS is capable of, but I hope my simple tutorial helped you get started on formatting your webpage, or at least led you in the right direction. Happy formatting!</p>
 
 
 
