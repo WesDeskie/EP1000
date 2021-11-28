@@ -129,3 +129,6 @@ a{
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: violet;}
+video{
+  width: 100%;
+}
