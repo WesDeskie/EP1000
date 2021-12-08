@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="this is awesome">
+    <title>Wesley website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+    <div id="nav">
+
+      <ul>
+        <li><a class="selected" href="../index.html">Home</a></li>
+        <li><a href="../about.html">About me</a></li>
+        <li><a href="../Safety.html">Fablab Safety</a></li>
+        <!--<li><div class="dropdown"><a href = "Learning.html" >Learning</a></div></li>-->
+        <li>
+          <div class="dropdown">
+            <!-- <button class="dropbtn">Learning</button> -->
+            <p>Learning</p>
+            <div class="dropdown-content">
+              <a href="web development.html">HTML</a>
+              <a href="CSS.html">CSS</a>
+              <a href="version control.html">Version control</a>
+              <a href="CAD.html">CAD</a>
+              <a href="#">3D Printing</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../projects/project.html">Final project</a></li>
+      </ul>
+    </div>
+    <div id="container">
+
+      <div id="content">
+        <div id="main">
+        <h2>3D printing</h2>
+        <p>So, you have a 3D model, but you have neither the tools nor the craftsmenship to create a physical model. This is where 3D printing is useful. 3D printing allows makers and designers to easily fabricate a design or model with minimal effort, and with the right settings, these prints can look almost perfect.</p>
+        <hr>
+        <h2>How does it work?</h2>
+        <p>3D printing falls under a category known as additive manufacturing, and it works by forming the intended shape layer by layer, either by laying molten material on top of each other or otherwise, thus the name "additive".</p>
+        <hr>
+        <p>There are a few types of 3D printing technology, there's "fused deposition modelling" (FDM), "Stereolithography Apparatus" (SLA), or "Selective Laser Sintering" (SLS). These are very different technologies, but the concept remains the same. Forming the model layer by layer.</p>
+        <hr>
+        <h2>FDM</h2>
+        <p>In FDM machines, they work by laying down layers of molten plastic on top of each other. It is the most common technology because of the cheaper price of the machines and ease of use. In SLA machines, they use a liquid resin, and the layers are polymerized with a UV light. These machines can produce prints with incredible detail. In SLS, a laser is used to sinter each layer from a nylon powder. These machines are used to create fuctional mechanical parts.</p>
+        <hr>
+        <h2>SLA</h2>
+        <p>In SLA machines, they use a liquid resin, and the layers are polymerized with a UV light. These machines can produce prints with incredible detail.</p>
+        <hr>
+        <h2>SLS</h2>
+        In SLS, a laser is used to sinter each layer from a nylon powder. These machines are used to create fuctional mechanical parts.
+        <hr>
+        <p>In this webpage, I will give a brief overview of how to prepare a 3D model for 3D printing on a FDM machine.</p>
+        <hr>
+        <h2>Slicing Models and Slicers</h2>
+        <p>Before we can print our model, we have to prepare it by "Slicing" the model. This works by using a Slicing Software known as a Slicer, to cut our model into many layers, so that our 3D printer can fabricate them. In this webpage I will show you how to use CURA, which you can download <a href="https://ultimaker.com/software/ultimaker-cura">here.</a></p>
+        <hr>
+        Our goal is to 3D print our Knight Model that we made previously. Click <a href="CAD.html">here</a> to find out how to make a Chess Knight 3D model. We want to go from this,
+        <img width="50%" src="../images/chess knight.png" alt="chess knight picture">
+        <p>to this.</p>
+        <img width=50% src="../images/chess knight grey.jpg" alt="picture of grey chess knight">
+        <hr>
+        <p>Watch the video below to find out how I prepared the 3D model for printing using CURA.</p>
+        <video src="../videos/#"  poster="../images/cura thumbnail.png" controls>
+          </video>
+          <hr>
+          <p>Now let's send it to print!</p>
+          <video src="../videos/3d printing vid.mp4"  autoplay muted loop >
+        </div>
+      </div>
+      <div id="footer">
+        Copyright &copy; 2021 Wesley Mok
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+
+</html>
