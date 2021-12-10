@@ -13,7 +13,7 @@
     <div id="nav">
 
       <ul>
-        <li><a  href="../index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About me</a></li>
         <li><a href="../Safety.html">Fablab Safety</a></li>
         <!--<li><div class="dropdown"><a href = "Learning.html" >Learning</a></div></li>-->
@@ -25,7 +25,7 @@
               <a href="web development.html">HTML</a>
               <a href="CSS.html">CSS</a>
               <a href="version control.html">Version control</a>
-              <a href="CAD.html">CAD</a>
+              <a href="CAD.html">3D CAD</a>
               <a href="3D printing.html">3D Printing</a>
             </div>
           </div>
@@ -37,39 +37,73 @@
 
       <div id="content">
         <div id="main">
-        <h2>3D printing</h2>
-        <p>So, you have a 3D model, but you have neither the tools nor the craftsmenship to create a physical model. This is where 3D printing is useful. 3D printing allows makers and designers to easily fabricate a design or model with minimal effort, and with the right settings, these prints can look almost perfect.</p>
-        <hr>
-        <h2>How does it work?</h2>
-        <p>3D printing falls under a category known as additive manufacturing, and it works by forming the intended shape layer by layer, either by laying molten material on top of each other or otherwise, thus the name "additive".</p>
-        <hr>
-        <p>There are a few types of 3D printing technology, there's "fused deposition modelling" (FDM), "Stereolithography Apparatus" (SLA), or "Selective Laser Sintering" (SLS). These are very different technologies, but the concept remains the same. Forming the model layer by layer.</p>
-        <hr>
-        <h2>FDM</h2>
-        <p>In FDM machines, they work by laying down layers of molten plastic on top of each other. It is the most common technology because of the cheaper price of the machines and ease of use. </p>
-        <hr>
-        <h2>SLA</h2>
-        <p>In SLA machines, they use a liquid resin, and the layers are polymerized with a UV light. These machines can produce prints with incredible detail.</p>
-        <hr>
-        <h2>SLS</h2>
-        In SLS, a laser is used to sinter each layer from a nylon powder. These machines are used to create fuctional mechanical parts.
-        <hr>
-        <p>In this webpage, I will give a brief overview of how to prepare a 3D model for 3D printing on a FDM machine.</p>
-        <hr>
-        <h2>Slicing Models and Slicers</h2>
-        <p>Before we can print our model, we have to prepare it by "Slicing" the model. This works by using a Slicing Software known as a Slicer, to cut our model into many layers, so that our 3D printer can fabricate them. In this webpage I will show you how to use CURA, which you can download <a href="https://ultimaker.com/software/ultimaker-cura">here.</a></p>
-        <hr>
-        <p>Our goal is to 3D print our Knight Model that we made previously. Click <a href="CAD.html">here</a> to find out how to make a Chess Knight 3D model. We want to go from this,</p>
-        <img width=50% src="../images/chess knight.png" alt="chess knight picture">
-        <p>to this.</p>
-        <img width=50% src="../images/chess knight grey.jpg" alt="picture of grey chess knight">
-        <hr>
-        <p>Watch the video below to find out how I prepared the 3D model for printing using CURA.</p>
-        <video src="../videos/cura finished.mp4"  poster="../images/cura thumbnail.png" controls>
+          <h2>3D printing</h2>
+          <p>So, you have a 3D model, but you have neither the tools nor the craftsmenship to create a physical model. This is where 3D printing is useful. 3D printing allows makers and designers to easily fabricate a design or model with minimal effort, and with the right settings, these prints can look almost perfect.</p>
+          <hr>
+          <h2>How does it work?</h2>
+          <p>3D printing falls under a category known as additive manufacturing, and it works by forming the intended shape layer by layer, either by laying molten material on top of each other or otherwise, thus the name "additive".</p>
+          <hr>
+          <p>There are a few types of 3D printing technology, there's "fused deposition modelling" (FDM), "Stereolithography Apparatus" (SLA), or "Selective Laser Sintering" (SLS). These are very different technologies, but the concept remains the same. Forming the model layer by layer.</p>
+          <hr>
+          <h2>FDM</h2>
+          <p>In FDM machines, they work by laying down layers of molten plastic on top of each other. It is the most common technology because of the cheaper price of the machines and ease of use. </p>
+          <hr>
+          <h2>SLA</h2>
+          <p>In SLA machines, they use a liquid resin, and the layers are polymerized with a UV light. These machines can produce prints with incredible detail.</p>
+          <hr>
+          <h2>SLS</h2>
+          In SLS, a laser is used to sinter each layer from a nylon powder. These machines are used to create fuctional mechanical parts.
+          <hr>
+          <p>In this webpage, I will give a brief overview of how to prepare a 3D model for 3D printing on a FDM machine.</p>
+          <hr>
+          <h2>Hardware</h2>
+          <p>The machine we will be using is an Ultimaker 2+. It's important to be familliar with the hardware before preparing the model fro printing. So here are some details about the Ultimaker 2+.</p>
+          <table>
+            <tr>
+              <td>Build Volume: </td>
+              <td>223x223x205mm</td>
+            </tr>
+            <tr>
+              <td>Filament diameter: </td>
+              <td>2.85mm</td>
+            </tr>
+            <tr>
+              <td>Nozzle diameter: </td>
+              <td>0.4mm</td>
+            </tr>
+            <tr>
+              <td>Travel speed: </td>
+              <td>30-300mm/s</td>
+            </tr>
+          </table>
+          <p>This gives us a good idea of what our print settings should be. The machine uses a larger filament diameter which means we can print at a higher speed, around 60mm/s. The nozzle diameter is 0.4, which allows it to print comfortably with 0.2 layer heights. It also lets us know how thick our line width can be. Knowing all this, lets load our model and print settings into our Slicer.</p>
+          <hr>
+          <h2>Slicing Models and Slicers</h2>
+          <p>Before we can print our model, we have to prepare it by "Slicing" the model. This works by using a Slicing Software known as a Slicer, to cut our model into many layers, so that our 3D printer can fabricate them. In this webpage I will show you how to use CURA, which you can download <a href="https://ultimaker.com/software/ultimaker-cura">here.</a></p>
+          <hr>
+          <p>Our goal is to 3D print our Knight Model that we made previously. Click <a href="CAD.html">here</a> to find out how to make a Chess Knight 3D model. We want to go from this,</p>
+          <img width=50% src="../images/chess knight.png" alt="chess knight picture">
+          <p>to this.</p>
+          <img width=50% src="../images/chess knight grey.jpg" alt="picture of grey chess knight">
+          <hr>
+          <p>Watch the video below to find out how I prepared the 3D model for printing using CURA. I edited settings such as "layer height" and "print speed" according to the machine specifications stated earlier. I go into a bit more detail in the video below.</p>
+
+          <video src="../videos/cura finished.mp4" poster="../images/cura thumbnail.png" controls>
           </video>
           <hr>
-          <p>Now let's send it to print!</p>
-          <video width=50% src="../videos/3d printing vid.mp4"  autoplay muted loop >
+          <p>Now let's send it to print! Insert your SD card into the machine, and use the inuitive rotating scroll wheel to navigate the printer. push down on the wheel to select, and rotate the wheel to scroll options. Select "print" and select your model.</p>
+          <video width=50% src="../videos/3d printing vid.mp4" autoplay muted loop>
+          </video>
+          <p>Here are some pictures of the finished prints:</p>
+          <img width=75% src="../images/chess knight too mcuh support.jpg" alt="picture of chess knight">
+          <p>My first print was not so succesful, the supports were too difficult to remove. From the image, you can see that the supports are very dense which makes them hard to remove. So I reduced the support density in CURA and also used "support blockers" to remove supports from unneccesary areas. </p>
+          <img width=75% src="../images/chess knight support.jpg" alt="picture of chess knight">
+          <p>Here's the second print. There's a lot less support and because they are less dense, they can be removed easily.</p>
+          <img width=75% src="../images/chess knight no support.jpg" alt="picture of chess knight">
+          <p>And here's the Knight after I removed the supports. Personally, I'm quite happy with the result. It still requires some finishing with sanding, but overall, the model is dimensionally accurate, and took less than 45 minutes to print. </p>
+          <hr>
+          <h2>Conclusion</h2>
+          <p>3D printing is a useful tool when it comes to prototyping. I was able to fabricate a dimensionally accurate model in 45 minutes without much physical effort, and while my model prints, I have extra time to work on my projects. I hope this is a good example of how 3D printing can help in digital fabrication and prototyping, and I hope you have a better understanding of how to prepare a 3D model for printing.</p>
 
         </div>
       </div>

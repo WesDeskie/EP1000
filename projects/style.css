@@ -131,3 +131,10 @@ a{
 video{
   width: 100%
 }
+table{
+ margin-left: auto;
+ margin-right: auto;
+}
+td{
+  text-align: left;
+}
