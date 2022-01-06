@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="this is awesome">
+    <title>Wesley website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+    <div id="nav">
+
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About me</a></li>
+        <li><a href="../Safety.html">Fablab Safety</a></li>
+        <!--<li><div class="dropdown"><a href = "Learning.html" >Learning</a></div></li>-->
+        <li>
+          <div class="dropdown">
+            <!-- <button class="dropbtn">Learning</button> -->
+            <p><b>Learning</b></p>
+            <div class="dropdown-content">
+              <a href="web development.html">HTML</a>
+              <a href="css.html">CSS</a>
+              <a href="version control.html">Version control</a>
+              <a href="Raster Graphics.html">Raster Graphics</a>
+              <a href="Vector Graphics.html">Vector Graphics</a>
+              <a href="CAD.html">3D CAD</a>
+              <a href="3D printing.html">3D Printing</a>
+              <a href="Laser cutting.html">Laser Cutting</a>
+              <a href="Software list.html">Software list</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="../projects/project.html">Final project</a></li>
+      </ul>
+    </div>
+    <div id="container">
+
+      <div id="content">
+        <div id="main">
+          <h1>Laser Cutting</h1>
+          <p>So, you have a 3D model, and you want to fabricate it with the least time and effort possible. Well, if your model consists of mainly flat panels to be joined together, you're in luck because flat shapes are perfect for laser cutting.</p>
+          <hr>
+          <h2>How does it work?</h2>
+          <p>Laser cutting falls under a catergory known as subtractive manufacturing, and involves cutting or removing material from a larger material, known as stock. The laser cutter in our lab uses a powerful C02 laser controled by CNC to cut materials like wood and acrylic like butter (As long as the material is thin enough).</p>
+          <hr>
+          <h2>FabLab's Laser Cutters</h2>
+          I used the Universal VLS6.60 laser cutter located in the FabLab, but you could use any laser cutter to follow along. There are many laser cutters available on the market from hobby level to industrial grade machines.
+          <hr>
+          <h2>Preparation</h2>
+          <p>Because laser cutters work in a 2D plane, we can't use our 3D model to program our toolpaths. We first have to export the profiles that we want to cut.</p>
+          <br>
+          <p>If you've followed along with my Music Box tutorial, you should have a model that looks something like this.</p>
+          <img width=50% src="../images/music box model.png" alt="picture of my fusion 360 model">
+          <p>Now, we want to export the profile of each of the panels that make up the Music Box. We can do so by creating a sketch on the face of the panel, and projecting its geometry onto the sketch, then we can export the sketch as a .dxf file.</p>
+          <video width="100" src="../videos/export dxf.mp4" controls poster="posterimage.jpg">
+
+          </video>
+          <p>Once all the profiles have been exported, import them into your Vector Editor and change the stroke colour to Red (RGB value:255, 0, 0)</p>
+          <img width=75% src="../images/music box inkscape.png" alt="">
+          <p>The stroke colour will be used to differentiate between a cut and an engraving. We use Red to define lines to be cut, and Green for areas to be engraved. Here I've drawn a design in InkScape that I want to have engraved onto my Music Box and I've changed the stroke colour to Green.</p>
+            <img width=75% src="../images/phantom engraving.png" alt="">
+
+
+        </div>
+      </div>
+      <div id="footer">
+        Copyright &copy; 2021 Wesley Mok
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+
+</html>
