@@ -131,10 +131,20 @@ a{
 video{
   width: 100%
 }
-table{
+/* table{
  margin-left: auto;
  margin-right: auto;
+} */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
-td{
+
+td, th {
+  border: 1px solid #dddddd;
   text-align: left;
+  /* padding: 8px; */
 }
+/* td{
+  text-align: left;
+} */
