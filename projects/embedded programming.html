@@ -73,7 +73,69 @@
         <p>Analog computing uses continuous values that can have a range of values. For example, the temperature of a room is an analog value as the value can be 25 degrees, or 25.1 degrees, or 25.123 degrees. There are an infinite amount of values it can take on.</p>
         <p>Here's a comparison between a digital signal and an analog one.</p>
         <img width=50% src="../images/digital vs analog.png" alt="">
-        <p>As you can see, the analog signal has values from -5V to 5V, and the digital signal only has values of 0V or 5V.</p>
+        <p>As you can see, the analog signal has values from -5V to 5V, and the digital signal only has values of 0V or 5V. Our Arduino Board mainly uses digital signals to do it's computing.</p>
+        <hr>
+        <h2>Arduino I/O</h2>
+        <p>Now, we can start looking at the Arduino's I/O, or Input/Output. Let's start with digital outputs. As mentioned before, the Arduino deals with digital signals, and in this case, it's output pins can give two outputs. Either a "Logic 1 (HIGH)", or a "Logic 0 (LOW)". The HIGH and LOW refer to two discrete voltages. The LOW will be 0 Volts, and the HIGH will be 5 Volts.</p>
+        <p>Now what does this all mean? Put simply, I can program the Arduino to give a Logic HIGH at one of its output pins, and if I measure the voltage at that pin, it'll be 5 Volts. That's great, now I can use this 5 Volts to power components like LEDs.</p>
+        <p>Similarly, I can set the Arduino Board's pins as input pins, so that it can detect if there is 5 Volts going to that pin from an external source like a switch.</p>
+        <p>The Arduino Board also has some analog input pins. These can be used to detect analog signals such as temperature.</p>
+        <p>Some common input devices are:</p>
+        <table>
+          <tr>
+            <th>Device</th>
+            <th>Analog/Digital</th>
+            <th>Function</th>
+            <th>Image</th>
+          </tr>
+          <tr>
+            <td>Switches, Push Buttons etc.</td>
+            <td>Digital</td>
+            <td>Mechanism used to toggle input logic</td>
+            <td><img width=30% src="../images/push button.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>Temperature Sensor</td>
+            <td>Analog</td>
+            <td>Measures the temperature via measuring voltage across a diode</td>
+            <td><img width=30% src="../images/temp sense.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>Ultrasonic Distance Sensor</td>
+            <td>Analog</td>
+            <td>Measures distance by sending ultrasonic pulses and measures the time taken for the sound to return</td>
+            <td><img width=30% src="../images/Ultrasonic.jpg" alt=""></td>
+          </tr>
+        </table>
+        <p>Some common output devices include:</p>
+        <table>
+          <tr>
+            <th>Device</th>
+            <th>Analog/Digital</th>
+            <th>Function</th>
+            <th>Image</th>
+          </tr>
+          <tr>
+            <td>LED (Light Emitting Diode)</td>
+            <td>Digital</td>
+            <td>A special kind of diode that emits light</td>
+            <td><img width=30% src="../images/LED.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>RGB LED</td>
+            <td>Digital</td>
+            <td>An LED that can emit the colours Red, Green and Blue to produce different colours</td>
+            <td><img width=30% src="../images/RGB LED.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>Motors (DC, Servo, Stepper)</td>
+            <td>Can be either</td>
+            <td>Outputs rotary motion, either continuous or discrete.</td>
+            <td><img width=30% src="../images/Motors.jpg" alt=""></td>
+          </tr>
+        </table>
+        <h2>Arduino Programming</h2>
+
 
 
 
