@@ -135,6 +135,35 @@
           </tr>
         </table>
         <h2>Arduino Programming</h2>
+        <p>I use the Arduino IDE to write and upload code to the Arduino Board.</p>
+        <img width=75% src="../images/Arduino IDE.png" alt="">
+        <p>This is what the IDE looks like when you launch it, and the first thing you need to do is make sure that you've configured the IDE to upload it to your specific Arduino Board model, in this case it's the UNO.</p>
+        <img width=75% src="../images/Arduino IDE2.png" alt="">
+        <p>The IDE helps you out a bit by separating the setup and loop functions and very kindly states what they are used for. All of your setup code goes between the curly brackets of the setup function, and the main code goes into the loop function to be repeated over and over again.</p>
+        <h3>Blinking an LED</h3>
+        <p>Let's start with a simple program to blink an LED. This is a good demonstration of some basic commands:</p>
+        <ul>
+          <li>pinMode(): This configures the pins to be input or output</li>
+          <li>digitalWrite(): This sends a logic HIGH or LOW to a specified pin</li>
+          <li>digitalRead(): Reads the value from a specified pin, either HIGH or LOW</li>
+          <li>delay(): Pauses the program for a specified time (in milliseconds)</li>
+        </ul>
+        <img width=80% src="../images/Arduino IDE3.png" alt="">
+        <ul>
+          <li>Take note of the syntax, all code inside a function has to be within the curly brackets</li>
+          <li>After each line of code, put a semicolon (;) at the end to denote the end of the line</li>
+          <li>Functions and commands have to be spelt correctly. pinMode should have a capitalised "M", OUTPUT should be capitalised</li>
+        </ul>
+        <p>Now we can click the tick on the top left hand corner to verify the code and see if it compiles.</p>
+        <hr>
+        <h3>Simulation</h3>
+        <p>After writing your program, you'd want to test it out to see if it works. And instead of wiring up your circuit, it is often easier to use a simulation software to see the output of your program.</p>
+        <h3>TinkerCAD</h3>
+        <p>TinkerCAD is a webapp that can be used for designing and simulating circuits, along with many other uses such as CAD.</p>
+        <video src="../videos/TinkerCAD.mp4" controls poster="posterimage.jpg">
+
+        </video>
+
 
 
 
