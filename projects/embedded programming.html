@@ -168,6 +168,7 @@
         <video src="../videos/flashing LEDs.mp4" autoplay muted poster="posterimage.jpg">
 
         </video>
+        <h3>Programming with Input Devices</h3>
         <p>Let's try something slightly more challenging. As part of assigment 12, I had to write a program that flashes the LEDs when a push button is pressed, and only turns off when the button is pressed again. The end result looks like this:</p>
         <video src="../videos/push button.mp4" controls poster="posterimage.jpg">
 
@@ -176,79 +177,10 @@
         <p>The code works like this. I have a variable called counter, which keeps track of how many times the button has been pushed. This is so the Arduino Board knows if the button has been pushed once, so it can turn on the LEDs, or if it's the second time, at which it will turn off the LEDs.</p>
         <p>I assign the value at pin 5 to the sw1 variable, and when sw1 is high, it will toggle the counter value. The rest is simple if else statements.</p>
         <p>Adding a delay is also important to give the Board time to register that the button has been released.</p>
-        #define R 12
-#define G 11
-#define Y 10
-#define sw1 7
-int count = 0;
-int state = HIGH;
-int runway = 400;
+        <h3>Programming complex sequences</h3>
+        <video src="../videos/complicated.mp4" controls muted poster="posterimage.jpg">
 
-void setup() {
-  pinMode(R, OUTPUT);
-  pinMode(G, OUTPUT);
-  pinMode(Y, OUTPUT);
-  pinMode(sw1, INPUT_PULLUP);
-  decode(count);
-
-}
-
-void loop() {
-  if(digitalRead(sw1) == LOW){
-    if (state == HIGH){
-      state = LOW;
-    }else{
-
-    }
-  }else{
-    if(state==LOW){
-      count = (count +1) %5;
-      decode(count);
-      state = HIGH;
-    }
-  }
-
-}
-void decode(int v){
-  switch(v){
-    off:
-    digitalWrite(R, 0);
-    digitalWrite(G, 0);
-    digitalWrite(Y, 0);
-    break;
-    case 1:
-    digitalWrite(R, 1);
-    digitalWrite(G, 0);
-    digitalWrite(Y, 0);
-    break;
-    case 2:
-    digitalWrite(R, 0);
-    digitalWrite(G, 1);
-    digitalWrite(Y, 0);
-    break;
-    case 3:
-    digitalWrite(R, 0);
-    digitalWrite(G, 0);
-    digitalWrite(Y, 1);
-    break;
-    case 4:
-    digitalWrite(Y, 0);
-    delay(500);
-    digitalWrite(R, 1);
-    delay(runway);
-    digitalWrite(G, 1);
-    delay(runway);
-    digitalWrite(Y, 1);
-    delay(runway);
-    digitalWrite(R, 0);
-    delay(runway);
-    digitalWrite(G, 0);
-    delay(runway);
-    digitalWrite(Y, 0);
-    delay(runway);
-    break;
-  }
-}
+        </video>
 
 
 
