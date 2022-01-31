@@ -67,6 +67,105 @@
         <h3>Analog Input Pins</h3>
         <p>Analog Input Pins are pins that can receive analog signals from components such as proximity or temperature sensors. They are the pins that you use whenever you need to receive any analog signal and convert them to digital signals. Knowing the number of Analog Input Pins on your board is important for the same reason I mentioned for Digital I/O pins.</p>
         <hr>
+        <h2>Digital vs Analog</h2>
+        <p>Before we start programming our Arduino Board, a quick lesson on Digital Electronics.</p>
+        <p>Digital computing refers to logic that uses discrete values or digits, thus the name "Digital". Most commonly used are 1's and 0's.</p>
+        <p>Analog computing uses continuous values that can have a range of values. For example, the temperature of a room is an analog value as the value can be 25 degrees, or 25.1 degrees, or 25.123 degrees. There are an infinite amount of values it can take on.</p>
+        <p>Here's a comparison between a digital signal and an analog one.</p>
+        <img width=50% src="../images/digital vs analog.png" alt="">
+        <p>As you can see, the analog signal has values from -5V to 5V, and the digital signal only has values of 0V or 5V. Our Arduino Board mainly uses digital signals to do it's computing.</p>
+        <hr>
+        <h2>Arduino I/O</h2>
+        <p>Now, we can start looking at the Arduino's I/O, or Input/Output. Let's start with digital outputs. As mentioned before, the Arduino deals with digital signals, and in this case, it's output pins can give two outputs. Either a "Logic 1 (HIGH)", or a "Logic 0 (LOW)". The HIGH and LOW refer to two discrete voltages. The LOW will be 0 Volts, and the HIGH will be 5 Volts.</p>
+        <p>Now what does this all mean? Put simply, I can program the Arduino to give a Logic HIGH at one of its output pins, and if I measure the voltage at that pin, it'll be 5 Volts. That's great, now I can use this 5 Volts to power components like LEDs.</p>
+        <p>Similarly, I can set the Arduino Board's pins as input pins, so that it can detect if there is 5 Volts going to that pin from an external source like a switch.</p>
+        <p>The Arduino Board also has some analog input pins. These can be used to detect analog signals such as temperature.</p>
+        <p>Some common input devices are:</p>
+        <table>
+          <tr>
+            <th>Device</th>
+            <th>Analog/Digital</th>
+            <th>Function</th>
+            <th>Image</th>
+          </tr>
+          <tr>
+            <td>Switches, Push Buttons etc.</td>
+            <td>Digital</td>
+            <td>Mechanism used to toggle input logic</td>
+            <td><img width=30% src="../images/push button.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>Temperature Sensor</td>
+            <td>Analog</td>
+            <td>Measures the temperature via measuring voltage across a diode</td>
+            <td><img width=30% src="../images/temp sense.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>Ultrasonic Distance Sensor</td>
+            <td>Analog</td>
+            <td>Measures distance by sending ultrasonic pulses and measures the time taken for the sound to return</td>
+            <td><img width=30% src="../images/Ultrasonic.jpg" alt=""></td>
+          </tr>
+        </table>
+        <p>Some common output devices include:</p>
+        <table>
+          <tr>
+            <th>Device</th>
+            <th>Analog/Digital</th>
+            <th>Function</th>
+            <th>Image</th>
+          </tr>
+          <tr>
+            <td>LED (Light Emitting Diode)</td>
+            <td>Digital</td>
+            <td>A special kind of diode that emits light</td>
+            <td><img width=30% src="../images/LED.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>RGB LED</td>
+            <td>Digital</td>
+            <td>An LED that can emit the colours Red, Green and Blue to produce different colours</td>
+            <td><img width=30% src="../images/RGB LED.jpg" alt=""></td>
+          </tr>
+          <tr>
+            <td>Motors (DC, Servo, Stepper)</td>
+            <td>Can be either</td>
+            <td>Outputs rotary motion, either continuous or discrete.</td>
+            <td><img width=30% src="../images/Motors.jpg" alt=""></td>
+          </tr>
+        </table>
+        <h2>Arduino Programming</h2>
+        <p>I use the Arduino IDE to write and upload code to the Arduino Board.</p>
+        <img width=75% src="../images/Arduino IDE.png" alt="">
+        <p>This is what the IDE looks like when you launch it, and the first thing you need to do is make sure that you've configured the IDE to upload it to your specific Arduino Board model, in this case it's the UNO.</p>
+        <img width=75% src="../images/Arduino IDE2.png" alt="">
+        <p>The IDE helps you out a bit by separating the setup and loop functions and very kindly states what they are used for. All of your setup code goes between the curly brackets of the setup function, and the main code goes into the loop function to be repeated over and over again.</p>
+        <h3>Blinking an LED</h3>
+        <p>Let's start with a simple program to blink an LED. This is a good demonstration of some basic commands:</p>
+        <ul>
+          <li>pinMode(): This configures the pins to be input or output</li>
+          <li>digitalWrite(): This sends a logic HIGH or LOW to a specified pin</li>
+          <li>digitalRead(): Reads the value from a specified pin, either HIGH or LOW</li>
+          <li>delay(): Pauses the program for a specified time (in milliseconds)</li>
+        </ul>
+        <img width=80% src="../images/Arduino IDE3.png" alt="">
+        <ul>
+          <li>Take note of the syntax, all code inside a function has to be within the curly brackets</li>
+          <li>After each line of code, put a semicolon (;) at the end to denote the end of the line</li>
+          <li>Functions and commands have to be spelt correctly. pinMode should have a capitalised "M", OUTPUT should be capitalised</li>
+        </ul>
+        <p>Now we can click the tick on the top left hand corner to verify the code and see if it compiles.</p>
+        <hr>
+        <h3>Simulation</h3>
+        <p>After writing your program, you'd want to test it out to see if it works. And instead of wiring up your circuit, it is often easier to use a simulation software to see the output of your program.</p>
+        <h3>TinkerCAD</h3>
+        <p>TinkerCAD is a webapp that can be used for designing and simulating circuits, along with many other uses such as CAD.</p>
+        <video src="../videos/TinkerCAD.mp4" controls poster="posterimage.jpg">
+
+        </video>
+        <p>Now that you know how to simulate your program, let's try a similar program with a switch as an input device.</p>
+
+
 
 
 
