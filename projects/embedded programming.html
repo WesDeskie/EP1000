@@ -178,6 +178,7 @@
         <video src="../videos/flashing LEDs.mp4" autoplay muted poster="posterimage.jpg">
 
         </video>
+        <hr>
         <h3>Programming with Input Devices</h3>
         <p>Let's try something slightly more challenging. As part of assigment 12, I had to write a program that flashes the LEDs when a push button is pressed, and only turns off when the button is pressed again. The end result looks like this:</p>
         <video src="../videos/push button.mp4" controls poster="posterimage.jpg">
@@ -187,14 +188,35 @@
         <p>The code works like this. I have a variable called counter, which keeps track of how many times the button has been pushed. This is so the Arduino Board knows if the button has been pushed once, so it can turn on the LEDs, or if it's the second time, at which it will turn off the LEDs.</p>
         <p>I assign the value at pin 5 to the sw1 variable, and when sw1 is high, it will toggle the counter value. The rest is simple if else statements.</p>
         <p>Adding a delay is also important to give the Board time to register that the button has been released.</p>
+        <hr>
         <h3>Programming complex sequences</h3>
+        <p>For this program, the LEDs are initially turned off. Pressing the button once turns on the Yellow LED, pressing again turns on the Green LED, and pressing again turns on the Red LED. Finally, pressing again will sequentially turn on and off all LEDs before returning to the initial state. </p>
         <video src="../videos/complicated.mp4" controls muted poster="posterimage.jpg">
 
         </video>
+        <p>Here's the code I used to program the 5 states. It's a bit complex to cover in this webpage but if you want to try it out, it's here nevertherless.</p>
+        <img width = 80% src="../images/code pic 1.png" alt="">
+        <img width = 80% src="../images/code pic 2.png" alt="">
+        <hr>
+        <h3>Practical Breadboarding</h3>
+        <p>After testing your program with the simulator, you're gonna want to put it all together, so let's wire up our circuits, and since we've already done the testing and troubleshooting, we can be fairly confident that they will work as expected.</p>
+        <h3>Simple LED flashing</h3>
+        <video src="../videos/simple LED.mp4" autoplay muted poster="posterimage.jpg">
 
+        </video>
+        <h3>Traffic Light</h3>
+        <video src="../videos/traffic.mp4" autoplay muted poster="posterimage.jpg">
 
+        </video>
+        <h3>Push Button Input</h3>
+        <video src="../videos/pushbutton.mp4" controls muted poster="posterimage.jpg">
 
+        </video>
+        <h3>One Button - Five States</h3>
+        <video src="../videos/5 states.mp4" controls muted poster="posterimage.jpg">
 
+        </video>
+        <p>All this is just a taste of what you can accomplish with embedded programming. For my final project, embedded programming is very crucial and I will go into more details about different actuators over on that webpage. Happy coding!</p>
 
 
         </div>
