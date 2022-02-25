@@ -327,6 +327,72 @@
 <p>If you've wired it up correctly, you should see you motor rotate clockwise, wait half a second, then rotate anticlockwise.</p>
 <p>If it works, that means we can use the myStepper.step() function to control the other 4 motors as well. All we need to do is write some code that randomly selects which motor to turn.</p>
 <iframe src=https://create.arduino.cc/editor/wesdeskie/6960ba47-5760-42cc-9e64-6f801d66b191/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+<p>Here's the code I wrote. I created an instance for each stepper motor, and then assigned each of the different rotations an integer. I also assigned an integer to each of the 6 cube faces.
+I then created an array with all the different number of steps required to rotate clockwise, anticlockwise, and a half turn. Then I created some functions to move the steppers, the main one being move(), which takes in a randomly selected face, and a randomly selected direction. Notice that I included the Up face, even though there's no motor there. I was planning to use a special sequence of moves to manipulated the Up face but decided to leave it alone in the interest of time and also because I couldnt get it to work. I will continue working on it after I take back my project. Finally, I set the speed of the motors to 120rpm. In the loop function, I created a variable for the push button "pb1" and set it to read the input at pin 46. Then when the input is low, randomly choose one of the 5 faces, and randomly choose one of the three directions. This is all happening in a for loop, which limits the number of repetitions to 25, which equals to 25 moves on the cube. I also added a while loop to ensure the same face does not get turned twice. </p>
+<p>I then tested the code with only 2 motors, to make sure I got the logic correct.</p>
+<video src="../videos/2 stepper test.mp4" controls poster="posterimage.jpg">
+
+</video>
+<p>After that, I took all the components home to start testing with 5 motors and then I could start soldering everything together. It was at this point that I realised that the H-Bridge started to heat up to an uncomfortable level whenever the motors would turn continuously or hold it's position as it was drawing lots of current. There are a couple of ways to fix this with hardware but I decided to just deactivate the inputs to the motors after each turn, thus the long line of "digitalWrite(LOW)" at the bottom of the code.</p>
+<h3>Testing Torque</h3>
+<video src="../videos/rubiks cube 2 motor.mp4" controls muted poster="posterimage.jpg">
+
+</video>
+<p>Here's me testing the torque with 2 motors attached to the cube. The torque was sufficient luckily, so I did a test with 5 motors.</p>
+<video src="../videos/5 motor test.mp4" controls poster="posterimage.jpg">
+
+</video>
+<p>Now that that works, it's time to solder everything together once and for all.</p>
+<video src="../videos/soldering.mp4" controls poster="posterimage.jpg">
+
+</video>
+<p>I also happen to have some 4 pin male connectors which were very convenient as my motors each have 4 wires so plugging it into the Arduino MEGA was easy.</p>
+<img width="70%" src="../images/male connector.jpg" alt="">
+<p>I also made it a point to mark out where all the components will go inside the base so I can mount them with plastic pcb stands and it will make everything much neater.</p>
+<p>After soldering the components, I soldered an indicator LED and also a DC adapter so I could take in 9V dc to power the Arduino and also the motors, but when I tested the circuit, it wouldnt work. Only one motor would move and then stop abruptly. I concluded that something was drawing too much current, preventing the motors from running properly. To solve this, I connected 100uF capacitors in parallel with the DC inputs of the motors. The capacitors would help to drive the motors when the current is not enough. My circuitry ended up looking like this.</p>
+<img width="70%" src="../images/final circuit.jpg" alt="">
+<p>Let's put everything together and see how it works, along with some troubles that I had with the process and also some minor details that werent in the original design.</p>
+<img width="70%" src="../images/assemble.jpg" alt="">
+<video src="../videos/final demo.mp4" controls poster="posterimage.jpg">
+
+
+</video>
+<hr>
+<h3>Troubleshooting</h3>
+<h4>Caps</h4>
+<p>Let's start with the caps and grippers. When I initially designed the gripping mechanism, I designed the cap to be completely flat on top. This made the engaging mechanism very finnicky to use. I basically had to wiggle the cube into position and close the motors aroun it before rotating the wheel. As a result, I redesigned the caps to have chamfering on the inner edges to allow the cube to slide into position.</p>
+<img width="70%" src="../images/cap compare.jpg" alt="">
+<h4>Prong</h4>
+<p>Next, I originally designed the grippers to have a gripping depth of 4mm. This works great for grabbing and turning the cube, but when engaging the cube, They are too long and obstruct the cube from going in and out.</p>
+<video src="../videos/fitting trouble.mp4" controls muted poster="posterimage.jpg">
+</video>
+<p>As such, I reduced the depth to 2mm, which only had to inverse problem, they didn't grip the cube well. So I split the difference and made it 3mm and it worked well enough.</p>
+<video src="../videos/good fit.mp4" controls muted poster="posterimage.jpg">
+</video>
+<h4>Spring Block</h4>
+<p>You might have noticed in a previous video that the design allows the motor to tilt all the way forward. This is not ideal, so I designed a rectangular block to fit underneath the housings. This will solve the tilting problem. I can also put a hole in the middle to fit a spring inside. This will ensure the motor never falls forward and even helps the motors disengage.</p>
+<img width="70%" src="../images/spring block1.jpg" alt="">
+<img width="70%" src="../images/spring block2.jpg" alt="">
+<p>Note that this does not affect the performance of the scrambling so you can skip this is you plan on making something similar.</p>
+<h4>Motor Housing</h4>
+<p>The motor housing had a fatal flaw, which is that I have to glue the front panel down, which makes trouble shooting difficult as I have to destroy the housing to access or swap out the motor. To fix this, I drilled 2 holes in the front and back panels, and printed a sort of dowel with holes to allow screws to thread and secure the front to the rest of the housing.</p>
+<img width="70%" src="../images/motor support .jpg" alt="">
+<h4>Base</h4>
+<p>The same goes for the base of the machine. I designed it to be glued onto the rest of the machine, but realised that would prevent me from opening the machine and fixing any hardware problems or reprogramming the Arduino Board. Because of this, I redesigned the sides and the base, so that the base can be screwed in place. I even used threaded brass inserts to ensure the screws would go in nicely. I then countersunk the holes on the sides so the screws would sit flush with the side panels.</p>
+
+<img width="70%" src="../images/threaded insert.jpg" alt="">
+<img width="70%" src="../images/countersink.jpg" alt="">
+<h4>Colour Matching</h4>
+<p>A surprising issue I faced was actually colour matching the 3D printed center caps. Because I printed all my parts in turquoise, certain colours such as orange, yellow and red have a hard time showing up nicely. So I had to mix and match different colours to get the centers to look as close as possible to the manufactured ones. My advice if you plan on doing something similar is to either print all the caps in white PLA, or use PLA with a similar colour to the caps.</p>
+<hr>
+<h2>Conclusion</h2>
+<p>In conclusion, this project taught me a lot about optimisation. As with all my projects, I take pride in making the final product as refined as possible, and this project was no different. Although I admit it was a bit too much for EP1000, I am glad I worked through all the issues and I could learn to use the Laser Cutter to quickly fabricate my project. I would highly recommend anyone to recreate this project it is a great learning opportunity. Below is a video showing exactly how my machine would work, and that's it for my EP1000 website! Good Luck!</p>
+<video src="../videos/Final video.mp4" controls poster="posterimage.jpg">
+
+</video>
+<img width="70%"src="../images/project_owner_template.png" alt="">
+
+
 
 
 
