@@ -317,7 +317,15 @@
 
 
 <img width="100%" src="../images/main housing.jpg" alt="">
-
+<hr>
+<h2>Electronics</h2>
+<p>Our main output devices are the NEMA17 stepper motors. So let's test those out first to make sure they work. A stepper motor is basically two coils placed perpendicular to each other with the motor coil in the center. When you energize the coils at the right time, you can make the output rotate in discreet steps. For my motors, 1 full rotation is 200 steps. So let's take a look at how to make them move.</p>
+<p>You will need a breadboard, jumper wires, your motor, and a H-bridge of your choice to drive the motor.</p>
+<img width="70%" src="../images/stepper circuit.png" alt="">
+<p>Here's the circuit diagram I used. I took it from <a href="https://lastminuteengineers.com/stepper-motor-l298n-arduino-tutorial/" target="_blank">lastminuteengineers.com</a>. I also borrowed some of the code from there.</p>
+<img width="80%" src="../images/stepper test.png" alt="">
+<p>If you've wired it up correctly, you should see you motor rotate clockwise, wait half a second, then rotate anticlockwise.</p>
+<p>If it works, that means we can use the myStepper.step() function to control the other 4 motors as well. All we need to do is write some code that randomly selects which motor to turn.</p>
 
 
 
